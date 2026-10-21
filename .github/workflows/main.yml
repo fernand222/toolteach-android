@@ -20,7 +20,7 @@ jobs:
              buildozer_version: stable
          
          - name: Subir el APK
-           uses: actions/upload-artifac
+           uses: actions/upload-artifact@v4
            with:
              name: toolteach-apk
              path: ${{ steps.buildozer.outputs.filename}}
