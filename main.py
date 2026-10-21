@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Toolteach - Sistema de Gestión Estudiantil (versión Android, hecha con Kivy).
