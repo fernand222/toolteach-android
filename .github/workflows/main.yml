@@ -1,1 +1,26 @@
+name: Compilar APK de Toolteach
 
+on: 
+   workflow_dispatch:
+   push:
+      branches: [ main ]
+
+jobs:
+   build:
+      runs-on: ubuntu-22.04
+      steps:
+         - name: Descargar el código
+           uses: actions/checkout@v4
+         
+         - name: Compilar el APK
+           uses: ArtemSBulgakov/buildoz
+           id: buildozer
+           with:
+             command: buildozer android
+             buildozer_version: stable
+         
+         - name: Subir el APK
+           uses: actions/upload-artifac
+           with:
+             name: toolteach-apk
+             path: ${{ steps.buildozer. 
