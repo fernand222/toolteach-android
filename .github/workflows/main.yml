@@ -13,7 +13,7 @@ jobs:
            uses: actions/checkout@v4
          
          - name: Compilar el APK
-           uses: ArtemSBulgakov/buildoz
+           uses: ArtemSBulgakov/buildozer-action@v1
            id: buildozer
            with:
              command: buildozer android
